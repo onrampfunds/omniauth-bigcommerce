@@ -25,7 +25,7 @@ module OmniAuth
       option :provider_ignores_state, true
       option :scope, 'users_basic_information'
       option :authorize_options, [:scope, :context]
-      option :token_options, [:scope, :context, :account_uuid]
+      option :token_options, [:client_id, :client_secret, :scope, :context, :account_uuid]
       option :client_options,
              site: ENV.fetch('BC_AUTH_SERVICE', 'https://login.bigcommerce.com'),
              authorize_url: '/oauth2/authorize',
